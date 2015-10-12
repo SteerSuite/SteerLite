@@ -206,6 +206,9 @@
     <ClCompile Include="..\..\src\Curve.cpp">
       <Filter>Source Files\util</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\PolygonObstacle.cpp">
+      <Filter>Source Files\obstacles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Globals.h">
@@ -432,6 +435,9 @@
     </ClInclude>
     <ClInclude Include="..\..\include\util\Curve.h">
       <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\obstacles\PolygonObstacle.h">
+      <Filter>Header Files\obstacles</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

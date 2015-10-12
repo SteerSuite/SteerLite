@@ -31,6 +31,8 @@ namespace SteerLib
 		void draw(); // implementation in .cpp
 		const Util::AxisAlignedBox & getBounds();
 
+        virtual void returnVertices(std::vector<Util::Vector>& _out) { return; }
+
 	protected:
 		double doorLocation;
 		double doorRadius;

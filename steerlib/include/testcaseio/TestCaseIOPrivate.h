@@ -186,6 +186,61 @@ namespace SteerLib {
 		//@}
 	};	
 
+	class STEERLIB_API RawPolygonObstacleInfo : public RawObstacleInfo {
+        public:
+                std::vector<Util::Point> vertices;
+
+                virtual ObstacleInitialConditions *getObstacleInitialConditions()
+                {
+                        PolygonObstacleInitialConditions *o = new PolygonObstacleInitialConditions(vertices);
+
+                        // for(int i=0; i<vertices.size(); i++)
+                        //      o->_vertices.push_back(vertices[i]);
+
+                        return o;
+                }
+
+                /// @name Implementation of the SpatialDatabaseItem interface
+                //@{
+                virtual bool isAgent() { return false; }
+                virtual bool blocksLineOfSight() { return false; }
+                virtual float getTraversalCost() { return 0.0f; }
+                virtual bool intersects(const Util::Ray &r, float &t) {
+                        ObstacleInitialConditions *ic = getObstacleInitialConditions();
+                        ObstacleInterface *o = ic->createObstacle();
+
+                        bool ret = o->intersects(r, t);
+
+                        delete o;
+                        delete ic;
+
+                        return ret;
+                }
+                virtual bool overlaps(const Util::Point & p, float radius) {
+                        ObstacleInitialConditions *ic = getObstacleInitialConditions();
+                        ObstacleInterface *o = ic->createObstacle();
+
+                        bool ret = o->overlaps(p, radius);
+
+                        delete o;
+                        delete ic;
+
+                        return ret;
+                }
+                virtual float computePenetration(const Util::Point & p, float radius) {
+                        ObstacleInitialConditions *ic = getObstacleInitialConditions();
+                        ObstacleInterface *o = ic->createObstacle();
+
+                        float ret = o->computePenetration(p, radius);
+
+                        delete o;
+                        delete ic;
+
+                        return ret;
+                }
+                //@}
+        };
+
 	class STEERLIB_API RawOrientedWallObstacleInfo : public RawOrientedBoxObstacleInfo {
 	public:
 		
@@ -275,6 +330,8 @@ namespace SteerLib {
 		void _parseOrientedWallObstacle(const ticpp::Element * subRoot);
 		/// Parses a circular obstacle element.
 		void _parseCircleObstacle(const ticpp::Element * subRoot);
+		/// Parses a ploygon obstacle element.
+                void _parsePolygonObstacle(const ticpp::Element * subRoot);
 		/// Parses an obstacle region element.
 		void _parseObstacleRegion(const ticpp::Element * subRoot);
 		/// Parses the initial conditions specified in an agent or agent region.

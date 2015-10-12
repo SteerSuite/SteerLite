@@ -26,6 +26,8 @@ namespace SteerLib {
 		virtual void draw() = 0;
 		virtual const Util::AxisAlignedBox & getBounds() = 0;
 
+        virtual void returnVertices(std::vector<Util::Vector>&) = 0;
+
 		/// @name The SpatialDatabaseItem interface
 		/// @brief This interface is kept pure abstract.
 		//@{

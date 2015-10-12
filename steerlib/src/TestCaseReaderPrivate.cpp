@@ -265,6 +265,9 @@ void TestCaseReaderPrivate::_parseTestCaseDOM(const ticpp::Element * root)
 			else if (childTagName == "circleObstacle") {
 				_parseCircleObstacle(&(*child));
 			}
+			else if (childTagName == "polygonObstacle") {
+                                _parsePolygonObstacle(&(*child));
+                        }
 			else if (childTagName == "obstacleRegion") {
 				_parseObstacleRegion(&(*child)); 
 			}
@@ -361,6 +364,38 @@ void TestCaseReaderPrivate::_parseCameraView(const ticpp::Element * subRoot)
 	}
 
 	_cameraViews.push_back(cvi);
+}
+
+void TestCaseReaderPrivate::_parsePolygonObstacle(const ticpp::Element * subRoot)
+{
+        RawPolygonObstacleInfo *obst = new RawPolygonObstacleInfo;
+        obst->isObstacleRandom = false;
+        //obst.obstacleBounds = _getBoundsFromXMLElement(subRoot);
+
+        ticpp::Iterator<ticpp::Element> child;
+
+        for (child = child.begin(subRoot); child != child.end(); child++ ) {
+                std::string childTagName = child->Value();
+
+                if (childTagName == "vertex") {
+                        Util::Point vertex;
+                        _getXYZOrRandomFromXMLElement(&(*child), vertex, obst->isObstacleRandom);
+                        obst->vertices.push_back(vertex);
+                }
+                else {
+                        throw GenericException("Unexpected tag <" + childTagName + "> found on line " + toString(child->Row()) + "\n");
+                }
+        }
+
+        //obst->obstacleBounds = AxisAlignedBox(obst->position.x-obst->radius, obst->position.x+obst->radius, obst->position.y, obst->position.y+obst->height, obst->position.z-obst->radius, obst->position.z+obst->radius);
+        ObstacleInitialConditions *ic = obst->getObstacleInitialConditions();
+        ObstacleInterface *o = ic->createObstacle();
+        obst->obstacleBounds = o->getBounds();
+
+        delete o;
+        delete ic;
+
+        _rawObstacles.push_back(obst);
 }
 
 void TestCaseReaderPrivate::_parseAgent(const ticpp::Element * subRoot)

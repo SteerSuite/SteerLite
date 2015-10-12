@@ -1,7 +1,8 @@
 //
-// Copyright (c) 2009-2014 Shawn Singh, Glen Berseth, Mubbasir Kapadia, Petros Faloutsos, Glenn Reinman
+// Copyright (c) 2009-2015 Glen Berseth, Mubbasir Kapadia, Shawn Singh, Petros Faloutsos, Glenn Reinman
 // See license.txt for complete license.
 //
+
 
 /// @file DrawLib.cpp
 /// @brief Implements Util::DrawLib functionality.
@@ -139,6 +140,12 @@ void DrawLib::drawLine(const Point & startPoint, const Point & endPoint, const C
 	glLineWidth(1.0f);
 }
 
+void DrawLib::drawRay(const Ray & r, const Color & color)
+{
+	drawLine(r.pos, r.pos + (r.dir*r.maxt), color);
+	drawLine(r.pos, r.pos + (r.dir*r.mint), color);
+}
+
 //
 // drawQuad()
 //
@@ -158,6 +165,12 @@ void DrawLib::drawQuad(const Point & a, const Point & b, const Point & c, const 
 		glVertex(d);
     }
     glEnd();
+}
+
+void DrawLib::drawQuad(const Point & a, const Point & b, const Point & c, const Point & d, const Color &color)
+{
+	glColor(color);
+	drawQuad(a,b,c,d);
 }
 
 
@@ -239,13 +252,31 @@ void DrawLib::drawAgentDisc(const Point & pos, const Vector & dir, float radius,
 		glColor(color);
 		glTranslate(pos);
 		glRotatef(rad,0.0f,1.0f,0.0f);
-		glScalef(radius, radius*4.0, radius);
+		glScalef(radius, radius*4.0f, radius);
 
 		_drawDisplayList(_agentDisplayList);
 	}
 	glPopMatrix();
 }
 
+void DrawLib::drawAgentDisc(const Point & pos, const Vector & dir, const Vector & up, float radius, const Color& color)
+{
+	glPushMatrix();
+	{
+		float yaxisrad = atan2(dir.z, dir.x)*(-M_180_OVER_PI);
+		float xaxisrad = atan2(dir.y, dir.z)*(-M_180_OVER_PI);
+		float zaxisrad = atan2(dir.y, dir.x)*(-M_180_OVER_PI);
+		glColor(color);
+		glTranslate(pos);
+		glRotatef(yaxisrad,0.0f,1.0f,0.0f);
+		glRotatef(xaxisrad,1.0f,0.0f,0.0f);
+		glRotatef(zaxisrad,0.0f,0.0f,1.0f);
+		glScalef(radius, radius*4.0f, radius);
+
+		_drawDisplayList(_agentDisplayList);
+	}
+	glPopMatrix();
+}
 //
 // drawAgentDisc() - use only after the agent display lists are built.
 //
@@ -255,7 +286,7 @@ void DrawLib::drawAgentDisc(const Point & pos, float radius, const Color& color)
 	{
 		glColor(color);
 		glTranslate(pos);
-		glScalef(radius, radius*4.0, radius);
+		glScalef(radius, radius*4.0f, radius);
 
 		_drawDisplayList(_agentDotDisplayList);
 	}
@@ -277,8 +308,9 @@ void DrawLib::drawBox(float xmin, float xmax, float ymin, float ymax, float zmin
 	Point botLefth(xmin, ymax, zmax);
 	Point botRighth(xmax, ymax, zmax);
 
-	// upper plane
+	// upper/lower plane
 	DrawLib::drawQuad(botLefth, botRighth, topRighth, topLefth);
+	DrawLib::drawQuad(topLeft, topRight, botRight, botLeft);
 
 	// top/bot sides
 	DrawLib::drawQuad(topLeft, topLefth, topRighth, topRight);
