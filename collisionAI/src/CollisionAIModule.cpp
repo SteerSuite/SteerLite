@@ -153,10 +153,12 @@ void CollisionAIModule::preprocessSimulation()
     {
         for ( size_t j = i + 1; j < polyVects.size(); ++j )
         {
-            if ( SteerLib::GJK_EPA::intersect( polyVects[i], polyVects[j] ) )
-                std::cerr<<" Oh my god! there is a collision between polygon No."<<i<<" and No."<<j<<std::endl;
+            Util::Vector penetration_vector;
+			float penetration_depth;
+            if ( SteerLib::GJK_EPA::intersect( penetration_depth, penetration_vector, polyVects[i], polyVects[j] ) )
+                std::cerr<<" Collision detected between polygon No."<<i<<" and No."<<j<< " with a penetration depth of "<< penetration_depth << " and penetration vector of "<<penetration_vector<<std::endl;
             else
-                std::cerr<<" There is NO collision between polygon No."<<i<<" and No."<<j<<std::endl;
+                std::cerr<<" NO collision detected between polygon No."<<i<<" and No."<<j<<std::endl;
         }
     }
 }
