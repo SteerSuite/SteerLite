@@ -56,6 +56,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "curveAI", "..\..\curveAI\bu
 		{48C8DD57-0195-44A5-AB09-C2756165768A} = {48C8DD57-0195-44A5-AB09-C2756165768A}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "collisionAI", "..\..\collisionAI\build\win32\collisionAI.vcxproj", "{554E203D-0CD5-4762-A404-34162B520F86}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4559341E-D53D-45E5-A67C-43D7C5956636} = {4559341E-D53D-45E5-A67C-43D7C5956636}
+		{48C8DD57-0195-44A5-AB09-C2756165768A} = {48C8DD57-0195-44A5-AB09-C2756165768A}
+	EndProjectSection
+EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
