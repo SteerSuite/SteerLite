@@ -257,6 +257,7 @@
     <ClCompile Include="..\..\src\CompositeTechniquePLE.cpp" />
     <ClCompile Include="..\..\src\Curve.cpp" />
     <ClCompile Include="..\..\src\FrameSaver.cpp" />
+    <ClCompile Include="..\..\src\GJK_EPA.cpp" />
     <ClCompile Include="..\..\src\OrientedWallObstacle.cpp" />
     <ClCompile Include="..\..\src\PolygonObstacle.cpp" />
     <ClCompile Include="..\..\src\SimulationMetricsCollector.cpp" />
@@ -297,6 +298,7 @@
     <ClInclude Include="..\..\include\benchmarking\BayesianFilter.h" />
     <ClInclude Include="..\..\include\benchmarking\CompositeTechniquePLE.h" />
     <ClInclude Include="..\..\include\Globals.h" />
+    <ClInclude Include="..\..\include\obstacles\GJK_EPA.h" />
     <ClInclude Include="..\..\include\obstacles\OrientedWallObstacle.h" />
     <ClInclude Include="..\..\include\obstacles\PolygonObstacle.h" />
     <ClInclude Include="..\..\include\SimulationPlugin.h" />

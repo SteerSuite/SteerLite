@@ -56,13 +56,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "curveAI", "..\..\curveAI\bu
 		{48C8DD57-0195-44A5-AB09-C2756165768A} = {48C8DD57-0195-44A5-AB09-C2756165768A}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "collisionAI", "..\..\collisionAI\build\win32\collisionAI.vcxproj", "{554E203D-0CD5-4762-A404-34162B520F86}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "collisionAI", "..\..\collisionAI\build\win32\collisionAI.vcxproj", "{B00E2220-E349-49C2-BE22-E659E6948331}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4559341E-D53D-45E5-A67C-43D7C5956636} = {4559341E-D53D-45E5-A67C-43D7C5956636}
 		{48C8DD57-0195-44A5-AB09-C2756165768A} = {48C8DD57-0195-44A5-AB09-C2756165768A}
 	EndProjectSection
 EndProject
-
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -197,6 +196,18 @@ Global
 		{554E203D-0CD5-4762-A404-34162B520F86}.ReleaseAVX|Win32.Build.0 = ReleaseAVX|Win32
 		{554E203D-0CD5-4762-A404-34162B520F86}.ReleaseAVX|x64.ActiveCfg = ReleaseAVX|x64
 		{554E203D-0CD5-4762-A404-34162B520F86}.ReleaseAVX|x64.Build.0 = ReleaseAVX|x64
+		{B00E2220-E349-49C2-BE22-E659E6948331}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B00E2220-E349-49C2-BE22-E659E6948331}.Debug|Win32.Build.0 = Debug|Win32
+		{B00E2220-E349-49C2-BE22-E659E6948331}.Debug|x64.ActiveCfg = Debug|x64
+		{B00E2220-E349-49C2-BE22-E659E6948331}.Debug|x64.Build.0 = Debug|x64
+		{B00E2220-E349-49C2-BE22-E659E6948331}.Release|Win32.ActiveCfg = Release|Win32
+		{B00E2220-E349-49C2-BE22-E659E6948331}.Release|Win32.Build.0 = Release|Win32
+		{B00E2220-E349-49C2-BE22-E659E6948331}.Release|x64.ActiveCfg = Release|x64
+		{B00E2220-E349-49C2-BE22-E659E6948331}.Release|x64.Build.0 = Release|x64
+		{B00E2220-E349-49C2-BE22-E659E6948331}.ReleaseAVX|Win32.ActiveCfg = ReleaseAVX|Win32
+		{B00E2220-E349-49C2-BE22-E659E6948331}.ReleaseAVX|Win32.Build.0 = ReleaseAVX|Win32
+		{B00E2220-E349-49C2-BE22-E659E6948331}.ReleaseAVX|x64.ActiveCfg = ReleaseAVX|x64
+		{B00E2220-E349-49C2-BE22-E659E6948331}.ReleaseAVX|x64.Build.0 = ReleaseAVX|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

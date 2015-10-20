@@ -209,6 +209,9 @@
     <ClCompile Include="..\..\src\PolygonObstacle.cpp">
       <Filter>Source Files\obstacles</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\GJK_EPA.cpp">
+      <Filter>Source Files\obstacles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Globals.h">
@@ -437,6 +440,9 @@
       <Filter>Header Files\util</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\obstacles\PolygonObstacle.h">
+      <Filter>Header Files\obstacles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\obstacles\GJK_EPA.h">
       <Filter>Header Files\obstacles</Filter>
     </ClInclude>
   </ItemGroup>

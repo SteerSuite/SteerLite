@@ -26,9 +26,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\CollisionAgent.cpp" />
+    <ClCompile Include="..\..\src\CollisionAIModule.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\CollisionAgent.h" />
+    <ClInclude Include="..\..\include\CollisionAIModule.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{554E203D-0CD5-4762-A404-34162B520F86}</ProjectGuid>
-    <RootNamespace>collisionAI</RootNamespace>
+    <ProjectGuid>{B00E2220-E349-49C2-BE22-E659E6948331}</ProjectGuid>
+    <RootNamespace>curveAI</RootNamespace>
     <ProjectName>collisionAI</ProjectName>
     <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -257,14 +265,6 @@
       <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\src\CollisionAgent.cpp" />
-    <ClCompile Include="..\..\src\CollisionAIModule.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\include\CollisionAgent.h" />
-    <ClInclude Include="..\..\include\CollisionAIModule.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

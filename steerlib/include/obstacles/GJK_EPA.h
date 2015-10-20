@@ -18,10 +18,10 @@
 namespace SteerLib
 {
 
-    class GJK_EPA
+    class STEERLIB_API GJK_EPA
     {
         public:
-            GJK_EPA();
+			GJK_EPA();
 
             /*
              *
