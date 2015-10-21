@@ -69,7 +69,7 @@ void Curve::sortControlPoints()
 	static bool flag = false;
 	if (!flag)
 	{
-		std::cerr << "ERROR>>>>Member function sortControlPoints is not implemented!" << std::endl;
+		//std::cerr << "ERROR>>>>Member function sortControlPoints is not implemented!" << std::endl;
 		flag = true;
 	}
 	//=========================================================================
