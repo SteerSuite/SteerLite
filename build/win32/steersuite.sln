@@ -37,11 +37,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pprAI", "..\..\pprAI\build\
 		{4559341E-D53D-45E5-A67C-43D7C5956636} = {4559341E-D53D-45E5-A67C-43D7C5956636}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rvo2dAI", "..\..\rvo2AI\build\win32\rvo2AI.vcxproj", "{009E420A-1542-428E-8E3C-DAD983A2D0E9}"
-	ProjectSection(ProjectDependencies) = postProject
-		{4559341E-D53D-45E5-A67C-43D7C5956636} = {4559341E-D53D-45E5-A67C-43D7C5956636}
-	EndProjectSection
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "util", "..\..\util\build\win32\util.vcxproj", "{48C8DD57-0195-44A5-AB09-C2756165768A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sfAI", "..\..\socialForcesAI\build\win32\sfAI.vcxproj", "{F9169E40-B72E-4A09-B85C-9EE1389225E5}"
@@ -60,6 +55,26 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "collisionAI", "..\..\collis
 	ProjectSection(ProjectDependencies) = postProject
 		{4559341E-D53D-45E5-A67C-43D7C5956636} = {4559341E-D53D-45E5-A67C-43D7C5956636}
 		{48C8DD57-0195-44A5-AB09-C2756165768A} = {48C8DD57-0195-44A5-AB09-C2756165768A}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dependencies", "dependencies", "{4A867FC4-B62C-4119-A6C4-87210CEB31F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "freeglut", "freeglut", "{71D6A7B1-B5B6-410E-B45B-3BD25B8C2605}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\freeglut-MSVC-3.0.0-2.mp\freeglut\include\GL\freeglut.h = ..\..\..\..\freeglut-MSVC-3.0.0-2.mp\freeglut\include\GL\freeglut.h
+		..\..\..\..\freeglut-MSVC-3.0.0-2.mp\freeglut\lib\x64\freeglut.lib = ..\..\..\..\freeglut-MSVC-3.0.0-2.mp\freeglut\lib\x64\freeglut.lib
+		..\..\..\..\freeglut-MSVC-3.0.0-2.mp\freeglut\include\GL\freeglut_ext.h = ..\..\..\..\freeglut-MSVC-3.0.0-2.mp\freeglut\include\GL\freeglut_ext.h
+		..\..\..\..\freeglut-MSVC-3.0.0-2.mp\freeglut\include\GL\freeglut_std.h = ..\..\..\..\freeglut-MSVC-3.0.0-2.mp\freeglut\include\GL\freeglut_std.h
+		..\..\..\..\freeglut-MSVC-3.0.0-2.mp\freeglut\include\GL\glut.h = ..\..\..\..\freeglut-MSVC-3.0.0-2.mp\freeglut\include\GL\glut.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GL", "GL", "{0B05096A-5911-4990-BE65-FF3DD80E861F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\glew-1.13.0-win32\glew-1.13.0\include\GL\glew.h = ..\..\..\..\glew-1.13.0-win32\glew-1.13.0\include\GL\glew.h
+		..\..\..\..\glew-1.13.0-win32\glew-1.13.0\lib\Release\x64\glew32.lib = ..\..\..\..\glew-1.13.0-win32\glew-1.13.0\lib\Release\x64\glew32.lib
+		..\..\..\..\glew-1.13.0-win32\glew-1.13.0\lib\Release\x64\glew32s.lib = ..\..\..\..\glew-1.13.0-win32\glew-1.13.0\lib\Release\x64\glew32s.lib
+		..\..\..\..\glew-1.13.0-win32\glew-1.13.0\include\GL\glxew.h = ..\..\..\..\glew-1.13.0-win32\glew-1.13.0\include\GL\glxew.h
+		..\..\..\..\glew-1.13.0-win32\glew-1.13.0\include\GL\wglew.h = ..\..\..\..\glew-1.13.0-win32\glew-1.13.0\include\GL\wglew.h
 	EndProjectSection
 EndProject
 Global
@@ -156,14 +171,6 @@ Global
 		{A8E03E2E-B9AE-4574-81A2-F661819322E1}.ReleaseAVX|Win32.Build.0 = ReleaseAVX|Win32
 		{A8E03E2E-B9AE-4574-81A2-F661819322E1}.ReleaseAVX|x64.ActiveCfg = ReleaseAVX|x64
 		{A8E03E2E-B9AE-4574-81A2-F661819322E1}.ReleaseAVX|x64.Build.0 = ReleaseAVX|x64
-		{009E420A-1542-428E-8E3C-DAD983A2D0E9}.Debug|Win32.ActiveCfg = Debug|Win32
-		{009E420A-1542-428E-8E3C-DAD983A2D0E9}.Debug|Win32.Build.0 = Debug|Win32
-		{009E420A-1542-428E-8E3C-DAD983A2D0E9}.Debug|x64.ActiveCfg = Debug|Win32
-		{009E420A-1542-428E-8E3C-DAD983A2D0E9}.Release|Win32.ActiveCfg = Release|Win32
-		{009E420A-1542-428E-8E3C-DAD983A2D0E9}.Release|Win32.Build.0 = Release|Win32
-		{009E420A-1542-428E-8E3C-DAD983A2D0E9}.Release|x64.ActiveCfg = Release|Win32
-		{009E420A-1542-428E-8E3C-DAD983A2D0E9}.ReleaseAVX|Win32.ActiveCfg = Release|Win32
-		{009E420A-1542-428E-8E3C-DAD983A2D0E9}.ReleaseAVX|x64.ActiveCfg = Release|Win32
 		{48C8DD57-0195-44A5-AB09-C2756165768A}.Debug|Win32.ActiveCfg = Release|x64
 		{48C8DD57-0195-44A5-AB09-C2756165768A}.Debug|Win32.Build.0 = Release|x64
 		{48C8DD57-0195-44A5-AB09-C2756165768A}.Debug|x64.ActiveCfg = Debug|x64
@@ -181,7 +188,8 @@ Global
 		{F9169E40-B72E-4A09-B85C-9EE1389225E5}.Debug|x64.ActiveCfg = Debug|Win32
 		{F9169E40-B72E-4A09-B85C-9EE1389225E5}.Release|Win32.ActiveCfg = Release|Win32
 		{F9169E40-B72E-4A09-B85C-9EE1389225E5}.Release|Win32.Build.0 = Release|Win32
-		{F9169E40-B72E-4A09-B85C-9EE1389225E5}.Release|x64.ActiveCfg = Release|Win32
+		{F9169E40-B72E-4A09-B85C-9EE1389225E5}.Release|x64.ActiveCfg = Release|x64
+		{F9169E40-B72E-4A09-B85C-9EE1389225E5}.Release|x64.Build.0 = Release|x64
 		{F9169E40-B72E-4A09-B85C-9EE1389225E5}.ReleaseAVX|Win32.ActiveCfg = Release|Win32
 		{F9169E40-B72E-4A09-B85C-9EE1389225E5}.ReleaseAVX|x64.ActiveCfg = Release|Win32
 		{554E203D-0CD5-4762-A404-34162B520F86}.Debug|Win32.ActiveCfg = Debug|Win32
@@ -211,5 +219,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{71D6A7B1-B5B6-410E-B45B-3BD25B8C2605} = {4A867FC4-B62C-4119-A6C4-87210CEB31F0}
+		{0B05096A-5911-4990-BE65-FF3DD80E861F} = {4A867FC4-B62C-4119-A6C4-87210CEB31F0}
 	EndGlobalSection
 EndGlobal
