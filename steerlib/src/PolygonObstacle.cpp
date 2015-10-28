@@ -24,7 +24,7 @@ PolygonObstacle::PolygonObstacle(std::vector<Util::Point> points, float traversa
     }
 
 	_centerPosition = Util::Point(0,0,0);
-	_radius = 1.0;
+	_radius = 0.0;
 	float ymin = 0.0;
 	float ymax = 1.0;
 	_bounds.ymin = ymin;
