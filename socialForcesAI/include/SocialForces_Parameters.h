@@ -15,7 +15,7 @@
 // #include "testcaseio/Behaviour.h"
 
 #define MAX_SPEED 2.6f
-#define PERFERED_SPEED 1.33 // TODO not added to parameters yet.
+#define PREFERED_SPEED 1.33 // TODO not added to parameters yet.
 
 
 #define ACCELERATION 0.5 // = v/A
