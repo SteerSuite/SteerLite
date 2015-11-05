@@ -67,6 +67,11 @@ if [ "$1" == "win32" ]; then
     rm -rf ../collisionAI/build/win32/ReleaseAVX
     rm -rf ../collisionAI/build/win32/Debug
     rm -f ../collisionAI/build/win32/collisionAI.vcproj.*.user
+
+    rm -rf ../searchAI/build/win32/Release
+    rm -rf ../searchAI/build/win32/ReleaseAVX
+    rm -rf ../searchAI/build/win32/Debug
+    rm -f ../searchAI/build/win32/searchAI.vcproj.*.user
     
     rm -rf ../curveAI/build/win32/Release
     rm -rf ../curveAI/build/win32/ReleaseAVX
@@ -151,6 +156,10 @@ if [ -d modules/ ]; then
     	rm -f modules/collisionAI.o
     fi
 
+    if [[ $BUILD_MODULE == "all" || $BUILD_MODULE == "searchAI" ]]; then
+        rm -f modules/searchAI.o
+    fi
+
     if [[ $BUILD_MODULE == "all" || $BUILD_MODULE == "curveAI" ]]; then
     	rm -f modules/curveAI.o
     fi
@@ -227,6 +236,13 @@ if [[ $BUILD_MODULE == "all" || $BUILD_MODULE == "collisionAI" ]]; then
 	pushd ../collisionAI/build > /dev/null
 	$MAKE clean > /dev/null
 	popd > /dev/null
+fi
+
+if [[ $BUILD_MODULE == "all" || $BUILD_MODULE == "searchAI" ]]; then
+    echo "Cleaning Search AI"
+    pushd ../searchAI/build > /dev/null
+    $MAKE clean > /dev/null
+    popd > /dev/null
 fi
 
 if [[ $BUILD_MODULE == "all" || $BUILD_MODULE == "curveAI" ]]; then
