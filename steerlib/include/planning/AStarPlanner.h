@@ -28,7 +28,7 @@ namespace SteerLib
 		The greater than, less than and equals operator have been overloaded. This means that objects of this class can be used with these operators. Change the functionality of the operators depending upon your implementation
 
 	*/
-	class AStarPlannerNode{
+	class STEERLIB_API AStarPlannerNode{
 		public:
 			double f;
 			double g;
@@ -58,7 +58,7 @@ namespace SteerLib
 
 	
 
-	class AStarPlanner{
+	class STEERLIB_API AStarPlanner{
 		public:
 			AStarPlanner();
 			~AStarPlanner();

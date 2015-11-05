@@ -249,6 +249,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\AgentMetricsCollector.cpp" />
+    <ClCompile Include="..\..\src\AStarPlanner.cpp" />
     <ClCompile Include="..\..\src\BehaviorParameter.cpp" />
     <ClCompile Include="..\..\src\Behaviour.cpp" />
     <ClCompile Include="..\..\src\BenchmarkEngine.cpp" />
@@ -301,6 +302,7 @@
     <ClInclude Include="..\..\include\obstacles\GJK_EPA.h" />
     <ClInclude Include="..\..\include\obstacles\OrientedWallObstacle.h" />
     <ClInclude Include="..\..\include\obstacles\PolygonObstacle.h" />
+    <ClInclude Include="..\..\include\planning\AStarPlanner.h" />
     <ClInclude Include="..\..\include\SimulationPlugin.h" />
     <ClInclude Include="..\..\include\SteerLib.h" />
     <ClInclude Include="..\..\include\testcaseio\Behaviour.h" />

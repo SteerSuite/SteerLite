@@ -212,6 +212,9 @@
     <ClCompile Include="..\..\src\GJK_EPA.cpp">
       <Filter>Source Files\obstacles</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\AStarPlanner.cpp">
+      <Filter>Source Files\planning</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Globals.h">
@@ -444,6 +447,9 @@
     </ClInclude>
     <ClInclude Include="..\..\include\obstacles\GJK_EPA.h">
       <Filter>Header Files\obstacles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\planning\AStarPlanner.h">
+      <Filter>Header Files\planning</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
