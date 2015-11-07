@@ -647,12 +647,6 @@ if [ $SOCIAL_FORCES_BUILD_RETURN_CODE == 0 ]; then
     SOCIAL_FORCES_INSTALL_RETURN_CODE=$?
 fi
 
-if [ $CURVE_BUILD_RETURN_CODE == 0 ]; then
-    echo "copying curveAI.o to $MODULES_DIR"
-    cp ../urveAI/build/curveAI.o $MODULES_DIR
-    CURVEAI_INSTALL_RETURN_CODE=$?
-fi
-
 echo ""
 echo "Summary:"
 
