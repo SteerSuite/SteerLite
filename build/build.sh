@@ -624,7 +624,7 @@ if [ $COLLISIONAI_BUILD_RETURN_CODE == 0 ]; then
 fi
 
 if [ $SEARCHAI_BUILD_RETURN_CODE == 0 ]; then
-    echo "copying collisonAI.o to $MODULES_DIR"
+    echo "copying searchAI.o to $MODULES_DIR"
     cp ../searchAI/build/searchAI.o $MODULES_DIR
     SEARCHAI_INSTALL_RETURN_CODE=$?
 fi
