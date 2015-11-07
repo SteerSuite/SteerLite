@@ -212,7 +212,7 @@ if [ "$BUILD_PLATFORM" == "osx" ]; then
     PPRAI_LFLAGS="$BASIC_LFLAGS $RPATH_LFLAGS $OSX_DYLIB_LFLAGS $STEERLIB_LINK $OPENGL_LINK $UTIL_LINK"
     
     UTIL_LFLAGS="$BASIC_LFLAGS $RPATH_LFLAGS $OSX_DYLIB_LFLAGS"
-    SOCIAL_FORCES_LFLAGS="$BASIC_LFLAGS $RPATH_LFLAGS $OSX_DYLIB_LFLAGS $STEERLIB_LINK $UTIL_LINK"
+    SOCIAL_FORCES_LFLAGS="$BASIC_LFLAGS $RPATH_LFLAGS $OSX_DYLIB_LFLAGS $STEERLIB_LINK $OPENGL_LINK $UTIL_LINK"
     
 
 elif [ "$BUILD_PLATFORM" == "linux" ]; then
@@ -624,7 +624,7 @@ if [ $COLLISIONAI_BUILD_RETURN_CODE == 0 ]; then
 fi
 
 if [ $SEARCHAI_BUILD_RETURN_CODE == 0 ]; then
-    echo "copying collisonAI.o to $MODULES_DIR"
+    echo "copying searchAI.o to $MODULES_DIR"
     cp ../searchAI/build/searchAI.o $MODULES_DIR
     SEARCHAI_INSTALL_RETURN_CODE=$?
 fi
@@ -645,12 +645,6 @@ if [ $SOCIAL_FORCES_BUILD_RETURN_CODE == 0 ]; then
     echo "copying sfAI.o to $MODULES_DIR"
     cp ../socialForcesAI/build/sfAI.o $MODULES_DIR
     SOCIAL_FORCES_INSTALL_RETURN_CODE=$?
-fi
-
-if [ $CURVE_BUILD_RETURN_CODE == 0 ]; then
-    echo "copying curveAI.o to $MODULES_DIR"
-    cp ../urveAI/build/curveAI.o $MODULES_DIR
-    CURVEAI_INSTALL_RETURN_CODE=$?
 fi
 
 echo ""
