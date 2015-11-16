@@ -16,7 +16,7 @@ def main():
 	if len(sys.argv) < 2:
         	sys.exit('Please follow below foramt:\npython student_grader_local.py GROUP_NUMBER')
 
-	testCases= ['hallway-one','hallway-two','hallway-four', 'hallway-five']
+	testCases= ['plane_engress','plane_ingress','crowd_crossing', 'office-complex', 'hallway-four-way-rounded-roundabout']
 	finalRes = []
 
 	try:

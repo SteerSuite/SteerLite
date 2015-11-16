@@ -30,7 +30,7 @@ def main():
 	except Exception as e:
 		print colored(e, 'red')
 
-	testCases= ['hallway-one','hallway-two','hallway-four', 'hallway-five']
+	testCases= ['plane_engress','plane_ingress','crowd_crossing', 'office-complex', 'hallway-four-way-rounded-roundabout']
 	finalRes = []
 
 	try:
