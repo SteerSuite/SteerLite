@@ -48,8 +48,8 @@
   </obstacle>
 
   <obstacle>
-    <xmin>4.4</xmin>
-    <xmax>3.4</xmax>
+    <xmin>3.4</xmin>
+    <xmax>4.4</xmax>
     <ymin>0</ymin>
     <ymax>1</ymax>
     <zmin>-36.4</zmin>
@@ -2509,4 +2509,3 @@
 
   
 </SteerBenchTestCase>
-
