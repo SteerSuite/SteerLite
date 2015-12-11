@@ -75,7 +75,7 @@
     <numAgents>100</numAgents>
     <regionBounds>
       <xmin>-97</xmin>
-      <xmax>70</xmax>
+      <xmax>-15</xmax>
       <ymin>0</ymin>
       <ymax>0</ymax>
       <zmin>-7</zmin>
@@ -96,39 +96,39 @@
 
   </agentRegion>
 
-  <agentRegion>
+<agentRegion>
     <numAgents>100</numAgents>
     <regionBounds>
-      <xmin>-97</xmin>
-      <xmax>70</xmax>
+      <xmin>97</xmin>
+      <xmax>15</xmax>
       <ymin>0</ymin>
       <ymax>0</ymax>
       <zmin>-7</zmin>
       <zmax>7</zmax>
     </regionBounds>
     <initialConditions>
-      <direction> <x>-1</x> <y>0</y> <z>0</z> </direction>
+      <direction> <x>1</x> <y>0</y> <z>0</z> </direction>
       <radius>0.5</radius>
       <speed>0</speed>
     </initialConditions>
     <goalSequence>
       <seekStaticTarget>
-        <targetLocation> <x>-98</x> <y>0</y> <z>-4</z> </targetLocation>
+        <targetLocation> <x>-98</x> <y>0</y> <z>5</z> </targetLocation>
         <desiredSpeed>1.3</desiredSpeed>
         <timeDuration>1000.0</timeDuration>
       </seekStaticTarget>
     </goalSequence>
 
   </agentRegion>
-  
-    <agentRegion>
+
+<agentRegion>
     <numAgents>100</numAgents>
     <regionBounds>
       <xmin>-7</xmin>
       <xmax>7</xmax>
       <ymin>0</ymin>
       <ymax>0</ymax>
-      <zmin>-80</zmin>
+      <zmin>15</zmin>
       <zmax>80</zmax>
     </regionBounds>
     <initialConditions>
@@ -144,17 +144,17 @@
       </seekStaticTarget>
     </goalSequence>
 
-  </agentRegion>
+ </agentRegion>
 
-    <agentRegion>
+<agentRegion>
     <numAgents>100</numAgents>
     <regionBounds>
       <xmin>-7</xmin>
       <xmax>7</xmax>
       <ymin>0</ymin>
       <ymax>0</ymax>
-      <zmin>-80</zmin>
-      <zmax>80</zmax>
+      <zmin>-15</zmin>
+      <zmax>-80</zmax>
     </regionBounds>
     <initialConditions>
       <direction> <x>-1</x> <y>0</y> <z>0</z> </direction>
@@ -169,6 +169,8 @@
       </seekStaticTarget>
     </goalSequence>
 
-  </agentRegion>
+ </agentRegion>
+
+   
 
 </SteerBenchTestCase>
